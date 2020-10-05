@@ -1035,7 +1035,7 @@
 
 
 	<p class="price-description"> Seleccionado:
-	  <span [text]="product[product.selectedColor].nombres[product.selectedSlide]">Visita a Domicilio de Instalador Eléctrico Autorizado SEC.</span>
+	  <span [text]="product[product.selectedColor].nombres[product.selectedSlide]">Visitar</span>
 	</p>
 
 
@@ -1054,25 +1054,28 @@
 
             <template type="amp-mustache">
 
-              <amp-img width="100"
+              <amp-img width="200" #100
                 tabindex = 0
-                height="90"
+                height="190" #90
                 layout="fixed"
                 aria-describedby = "{{precio}}"
                 alt="{{precio}}"
                 src="{{img}}">
-                
-                <div>
-                  <button
-                  class="ampstart-btn caps m2 agregar-gallery-button">{{precio}}
-                </div>
+            
+              </amp-img>
                 <div>
                   <button
                     on="tap:AMP.setState({itemsSrc: itemsSrc.filter(a => a.id != {{id}})}),item-list.refresh"
                     class="close-list-button">X
                   </button>
                 </div>
-              </amp-img>
+
+                <div>
+                  <button
+                  class="ampstart-btn caps m2 agregar-gallery-button">{{precio}}
+                </div>
+
+
             </template>
 
             <div overflow
