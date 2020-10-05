@@ -1063,12 +1063,14 @@
                 src="{{img}}">
                 
                 <div>
+                  <button>
+                  <h3>{{precio}}</h3>
+                  </button>
                   <button
                     on="tap:AMP.setState({itemsSrc: itemsSrc.filter(a => a.id != {{id}})}),item-list.refresh"
                     class="close-list-button">X
                   </button>
                 </div>
-              <h3>{{precio}}</h3>
               </amp-img>
             </template>
 
