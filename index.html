@@ -943,7 +943,16 @@
         <div class="product-gallery">
 
 
-            <div fallback>
+          <amp-list
+            class="mt3"
+            layout="fixed-height"
+            height= 190
+            items = "."
+            binding="no"
+            [src] = "itemsSrc"
+            id="item-list" >
+
+            <div >
               <div class = "content">
                 <button 
                   class="ampstart-btn ml1 caps"
@@ -954,15 +963,6 @@
             </div>
 
 
-
-          <amp-list
-            class="mt3"
-            layout="fixed-height"
-            height= 190
-            items = "."
-            binding="no"
-            [src] = "itemsSrc"
-            id="item-list" >
 
             <template type="amp-mustache">
 
