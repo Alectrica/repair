@@ -943,6 +943,17 @@
         <div class="product-gallery">
 
 
+            <div fallback>
+              <div class = "content">
+                <button 
+                  class="ampstart-btn ml1 caps"
+                  on="tap:item-list.refresh"
+                  type='submit'>Pagar
+                </button>
+              </div>
+            </div>
+
+
 
           <amp-list
             class="mt3"
@@ -954,18 +965,6 @@
             id="item-list" >
 
             <template type="amp-mustache">
-
-
-            <div fallback>
-              <div class = "content">
-                <button 
-                  class="ampstart-btn ml1 caps"
-                  on="tap:item-list.refresh"
-                  type='submit'>Pagar
-                </button>
-              </div>
-            </div>
-
 
               <amp-img width="100" #100
                 tabindex = 0
