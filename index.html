@@ -929,7 +929,7 @@
 	      role="button"
 	      tabindex="0">
                 <button 
-                  on="tap:AMP.setState( { product: { selectedServicio: product.selectedServicio + 1}, itemsSrc: itemsSrc.concat([ { id: 6, img: product[product.selectedColor].imagenes[6]}]) } ),item-list.refresh "
+                  on="tap:AMP.setState( { product: { selectedServicio: product.selectedServicio + 1}, itemsSrc: itemsSrc.concat([ { id: 6, precio: product[product.selectedColor].precios[6], img: product[product.selectedColor].imagenes[6]}]) } ),item-list.refresh "
                   class="ampstart-btn caps m2 agregar-gallery-button">Agregar
                 </button>
 	      <amp-img src="/img/instalador_sec.png"
@@ -983,7 +983,7 @@
 	      "selectedSlide": 0,
               "selectedSlideForBlue": 0,
 	      "blue": {
-                "cantidad":{
+                "precios" : {
                   "0": "25000",
                   "1": "60000",
                   "2": "Cotizar",
