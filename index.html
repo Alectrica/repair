@@ -729,18 +729,6 @@
 	      </amp-img>
 	    </li>
 	    <li>
-	      <amp-img on="tap:AMP.setState({product: {selectedSlide :3, selectedSlideForBlue: 3}})"
-		src="/img/proyecto_energia_solar_60_40.png"
-		width="60"
-		height="40"
-		class=""
-		[class]="product.selectedSlideForBlue == 3 ? 'selected fadeIn' : '' "
-		tabindex="0"
-		role="button">
-	      </amp-img>
-	    </li>
-
-	    <li>
 	      <amp-img on="tap:AMP.setState({product: {selectedSlide: 4, selectedSlideForBlue: 4}})"
 		src="/img/instalacion_luminaria_60_40.png"
 		width="60"
@@ -826,23 +814,6 @@
                 class="ampstart-btn caps m2 agregar-gallery-button">Agregar
               </button>
 	      <amp-img src="/img/atencion_corte_de_luz.png"
-		width="1024"
-		height="682"
-		layout="responsive"
-		on="tap:gallery-lightbox"
-		role="button"
-		tabindex="0">
-	      </amp-img>
-	    </div>
-
-	    <div 
-	      role="button"
-	      tabindex="0">
-              <button 
-                on="tap:AMP.setState( { product: { selectedServicio: product.selectedServicio + 1}, itemsSrc: itemsSrc.concat([ { id: 3,  precio: product[product.selectedColor].precios[3], img: product[product.selectedColor].imagenes[3]}]) } ),item-list.refresh "
-                class="ampstart-btn caps m2 agregar-gallery-button">Agregar
-              </button>
-	      <amp-img src="/img/proyecto_energia_solar.png"
 		width="1024"
 		height="682"
 		layout="responsive"
