@@ -1,0 +1,3 @@
+convert -resize 256x256 instalacion_enchufe.png instalacion_enchufe.png
+
+
