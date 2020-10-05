@@ -399,20 +399,6 @@ self.addEventListener("push", (event) => {
 });
 
 
-
-self.addEventListener('fetch', event => {
-  event.respondWith(handleRequest(event.request))
-})
-
-/**
- * Respond to the request
- * @param {Request} request
- */
-async function handleRequest(request) {
-  return new Response('Hola Chile', {status: 200})
-}
-
-
 //-----------------------------------------------------------------
 self.addEventListener('notificationclick', function(event) {
   console.log('[Service Worker] Notification click Received.');
