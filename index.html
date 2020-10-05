@@ -1054,15 +1054,14 @@
 
             <template type="amp-mustache">
 
-              <amp-img width="110" #100
+              <amp-img width="210" #100
                 tabindex = 0
-                height="100" #90
+                height="190" #90
                 layout="fixed"
                 aria-describedby = "{{precio}}"
                 alt="{{precio}}"
                 src="{{img}}">
-            
-              </amp-img>
+
                 <div>
                   <button
                     on="tap:AMP.setState({itemsSrc: itemsSrc.filter(a => a.id != {{id}})}),item-list.refresh"
@@ -1074,13 +1073,14 @@
                   <button
                   class="ampstart-btn caps m2 agregar-gallery-button">{{precio}}
                 </div>
+              </amp-img>
 
 
             </template>
 
-            <div overflow
-              class = "list-overflow">
-              VER MAS
+            <div overflow >
+               <button
+                  class="ampstart-btn caps m2 agregar-gallery-button">VER MAS
             </div>
 
             <div fallback>
