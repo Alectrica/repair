@@ -796,7 +796,7 @@
 	      role="button"
 	      tabindex="0">
               <button 
-                on="tap:AMP.setState( { product: { selectedServicio: product.selectedServicio + 1}, itemsSrc: itemsSrc.concat([ { id: 2, precio: product[product.selectedColor].precios[2], img: product[product.selectedColor].imagenes[2]}]) } ),item-list.refresh "
+                on="tap:AMP.setState( { product: { selectedServicio: product.selectedServicio + 1}, itemsSrc: itemsSrc.concat([ { id: 1, precio: product[product.selectedColor].precios[1], img: product[product.selectedColor].imagenes[1]}]) } ),item-list.refresh "
                 class="ampstart-btn caps m2 agregar-gallery-button">Agregar
               </button>
 	      <amp-img src="/img/atencion_corte_de_luz.png"
@@ -813,7 +813,7 @@
 	      role="button"
 	      tabindex="0">
               <button 
-                on="tap:AMP.setState( { product: { selectedServicio: product.selectedServicio + 1}, itemsSrc: itemsSrc.concat([ { id: 4, precio: product[product.selectedColor].precios[4], img: product[product.selectedColor].imagenes[4]}]) } ),item-list.refresh "
+                on="tap:AMP.setState( { product: { selectedServicio: product.selectedServicio + 1}, itemsSrc: itemsSrc.concat([ { id: 2, precio: product[product.selectedColor].precios[2], img: product[product.selectedColor].imagenes[2]}]) } ),item-list.refresh "
                 class="ampstart-btn caps m2 agregar-gallery-button">Agregar
               </button>
 	      <amp-img src="/img/instalacion_luminaria.png"
@@ -831,7 +831,7 @@
 	      role="button"
 	      tabindex="0">
               <button 
-                on="tap:AMP.setState( { product: { selectedServicio: product.selectedServicio + 1}, itemsSrc: itemsSrc.concat([ { id: 5, precio: product[product.selectedColor].precios[5], img: product[product.selectedColor].imagenes[5]}]) } ),item-list.refresh "
+                on="tap:AMP.setState( { product: { selectedServicio: product.selectedServicio + 1}, itemsSrc: itemsSrc.concat([ { id: 3, precio: product[product.selectedColor].precios[3], img: product[product.selectedColor].imagenes[3]}]) } ),item-list.refresh "
                 class="ampstart-btn caps m2 agregar-gallery-button">Agregar
               </button>
 	      <amp-img src="/img/instalacion_enchufe.png"
@@ -888,39 +888,27 @@
 	      "blue": {
                 "precios" : {
                   "0": "$25000",
-                  "1": "$60000",
                   "2": "$60000",
-                  "3": "Cotizar",
                   "4": "$15000",
-                  "5": "$15000",
-                  "6": "$300000"
+                  "5": "$15000"
                   },
 		"ids" : {
 		  "0": "",
 		  "1": "",
 		  "2": "",
-		  "3": "",
-		  "4": "",
-		  "5": "",
-		  "6": ""
+		  "3": ""
 		  },
 		"nombres": {
 		  "0": "Visitar",
-		  "1": "Mantener",
 		  "2": "Reparar",
-		  "3": "P.Solar",
 		  "4": "I.Luminaria",
-		  "5": "I.Enchufe",
-		  "6": "Certificar"
+		  "5": "I.Enchufe"
 		},
                 "imagenes": {
                   "0": "https://repair.alectrica.cl/img/alectrico.png",
-                  "1": "https://repair.alectrica.cl/img/mantencion_electrica.png",
                   "2": "https://repair.alectrica.cl/img/atencion_corte_de_luz.png",
-                  "3": "https://repair.alectrica.cl/img/proyecto_energia_solar.png",
                   "4": "https://repair.alectrica.cl/img/instalacion_luminaria.png",
-                  "5": "https://repair.alectrica.cl/img/instalacion_enchufe.png",
-                  "6": "https://repair.alectrica.cl/img/instalador_sec.png"
+                  "5": "https://repair.alectrica.cl/img/instalacion_enchufe.png"
                 }
 	      }
 	    }
