@@ -752,20 +752,6 @@
 	      </amp-img>
 	    </li>
 
-
-
-	    <li>
-	      <amp-img on="tap:AMP.setState({product: {selectedSlide: 6, selectedSlideForBlue: 6}})"
-		src="/img/instalador_sec_60_40.png"
-		width="60"
-		height="40"
-		class=""
-		[class]="product.selectedSlideForBlue == 6 ? 'selected fadeIn' : '' "
-		tabindex="0"
-		role="button">
-	      </amp-img>
-	    </li>
-
 	  </ul>
 	</div>
 
@@ -858,25 +844,6 @@
 	      </amp-img>
 	    </div>
 
-
-
-
-	    <div 
-	      role="button"
-	      tabindex="0">
-                <button 
-                  on="tap:AMP.setState( { product: { selectedServicio: product.selectedServicio + 1}, itemsSrc: itemsSrc.concat([ { id: 6, precio: product[product.selectedColor].precios[6], img: product[product.selectedColor].imagenes[6]}]) } ),item-list.refresh "
-                  class="ampstart-btn caps m2 agregar-gallery-button">Agregar
-                </button>
-	      <amp-img src="/img/instalador_sec.png"
-		width="1290"
-		height="1290"
-		layout="responsive"
-		on="tap:gallery-lightbox"
-		role="button"
-		tabindex="0">
-	      </amp-img>
-	    </div>
 	  </amp-carousel>
 
 
