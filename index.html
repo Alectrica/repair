@@ -838,7 +838,7 @@
 	      role="button"
 	      tabindex="0">
               <button 
-                on="tap:AMP.setState( { product: { selectedServicio: product.selectedServicio + 1}, itemsSrc: itemsSrc.concat([ { id: 3, precio: product[product.selectedColor].precios[3], img: product[product.selectedColor].imagenes[3]}]) } ),item-list.refresh "
+                on="tap:AMP.setState( { product: { selectedServicio: product.selectedServicio + 1}; total_pago: itemsSrc.reduce((x,i) => x.id + i.id; itemsSrc: itemsSrc.concat([ { id: 3, precio: product[product.selectedColor].precios[3], img: product[product.selectedColor].imagenes[3]}]) } ),item-list.refresh "
                 class="ampstart-btn caps m2 agregar-gallery-button">Agregar
               </button>
 	      <amp-img src="/img/instalacion_enchufe.png"
@@ -880,6 +880,9 @@
 	    </div>
 	  </amp-image-lightbox>
 	</div>
+
+        <amp-state id="total_pago">
+        </amp-state>
 
         <amp-state id="ping">
         </amp-state>
@@ -951,7 +954,7 @@
                   type='submit'>Pagar
                 </button>
               </div>
-              <p [text]="'total: ' + itemSrc.reduce((a, i) => a.id.toFixed(1) + i.id.toFixed(1))">
+              <p [text]= total_pago>
                  total: $ 0
               </p>
 
