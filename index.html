@@ -951,7 +951,7 @@
                   type='submit'>Pagar
                 </button>
               </div>
-              <p [text]="'total: ' + itemSrc.reduce((a, i) => a.id + i.id)">
+              <p [text]="'total: ' + itemSrc.reduce((a, i) => a.id.toFixed(1) + i.id.toFixed(1))">
                  total: $ 0
               </p>
 
