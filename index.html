@@ -966,9 +966,6 @@
 
             <template type="amp-mustache">
 
-              <p [text]="'reduce: ' + itemSrc.reduce((a, i) => a.precio + i.precio)">
-                  reduce: add all numbers in array together
-             </p>
               <amp-img width="100" #100
                 tabindex = 0
                 height="90" #90
@@ -978,6 +975,15 @@
                 src="{{img}}">
 
                 <div>
+                  </p>
+                  <p [text]="'concat: ' + itemSrc.concat(4)">
+                    concat: $ 0
+                  </p>
+
+                  <p [text]="'total: ' + itemSrc.reduce((a, i) => a.precio + i.precio)">
+                    total: $ 0
+                  </p>
+
                   <button
                     on="tap:AMP.setState({itemsSrc: itemsSrc.filter(a => a.id != {{id}})}),item-list.refresh"
                     class="close-list-button">X
