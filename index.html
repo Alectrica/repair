@@ -966,6 +966,9 @@
 
             <template type="amp-mustache">
 
+              <p [text]="'reduce: ' + itemSrc.reduce((a, i) => a.precio + i.precio)">
+                  reduce: add all numbers in array together
+             </p>
               <amp-img width="100" #100
                 tabindex = 0
                 height="90" #90
