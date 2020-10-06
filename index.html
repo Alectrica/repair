@@ -951,7 +951,12 @@
                   type='submit'>Pagar
                 </button>
               </div>
+              <p [text]="'total: ' + itemSrc.reduce((a, i) => a.id + i.id)">
+                 total: $ 0
+              </p>
+
             </div>
+
 
 
 
@@ -975,14 +980,6 @@
                 src="{{img}}">
 
                 <div>
-                  </p>
-                  <p [text]="'concat: ' + itemSrc.concat(4)">
-                    concat: $ 0
-                  </p>
-
-                  <p [text]="'total: ' + itemSrc.reduce((a, i) => a.precio + i.precio)">
-                    total: $ 0
-                  </p>
 
                   <button
                     on="tap:AMP.setState({itemsSrc: itemsSrc.filter(a => a.id != {{id}})}),item-list.refresh"
