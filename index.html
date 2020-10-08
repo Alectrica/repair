@@ -958,7 +958,7 @@
                 </button>
               </div>
              
-              <p [text]=" values(itemsSrc).map( (x,i) => x.monto ).reduce((a,i) => a + i).toPrecision(3)">
+              <p [text]=" values(itemsSrc).map( (x,i) => x.monto ).reduce((a,i) => a + i).toPrecision(3).toFixed(3).toString">
                  itemSrc values: $ 0
               </p>
 
