@@ -958,8 +958,8 @@
                 </button>
               </div>
              
-              <p [text]="$ (values(itemsSrc).map( (x,i) => x.monto ).reduce((a,i) => a + i)*0.001).toFixed(3).toString">
-                 itemSrc values: $ 0
+              <p [text]="$ " + " (values(itemsSrc).map( (x,i) => x.monto ).reduce((a,i) => a + i)*0.001).toFixed(3).toString">
+                 $ 0
               </p>
 
             </div>
