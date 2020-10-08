@@ -957,12 +957,10 @@
                   type='submit'>Pagar
                 </button>
               </div>
-              <p [text]="'keys: ' + values(itemsSrc).reduce((a,i) => a.monto + i.monto)">
-                 keys: $ 0
-              </p>
              
-              <p [text]=" values(itemsSrc).map( (x,i) => x.monto ).reduce((a,i) => a + i) ">
-                 itemSrc values: $ 0
+              <p class="ampstart-btn ml1 caps"
+                [text]="$ values(itemsSrc).map( (x,i) => x.monto ).reduce((a,i) => a + i) ">
+                
               </p>
 
             </div>
