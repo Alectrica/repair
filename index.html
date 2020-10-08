@@ -958,8 +958,8 @@
                 </button>
               </div>
              
-              <p class="ampstart-btn ml1 caps"
-                [text]="$ values(itemsSrc).map( (x,i) => x.monto ).reduce((a,i) => a + i) ">
+              <p 
+                [text]="$ values(itemsSrc).map( (x,i) => x.monto ).reduce((a,i) => a + i).toPrecision(3) ">
                 
               </p>
 
