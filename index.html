@@ -957,7 +957,7 @@
                   type='submit'>Pagar
                 </button>
               </div>
-              <p [text]="'keys: ' + values(itemsSrc).reduce((a,i) => a.id+i.id)">
+              <p [text]="'keys: ' + values(itemsSrc).reduce((a,i) => a.monto + i.monto)">
                  keys: $ 0
               </p>
 
