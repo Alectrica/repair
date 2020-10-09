@@ -954,12 +954,15 @@
                 <button 
                   class="ampstart-btn ml1 caps"
                   on="tap:item-list.refresh"
-                  type='submit'>Pagar
+                  type='submit'>Pagar El Mínimo
                 </button>
               </div>
              
-              <p [text]="'$'.concat( (values( itemsSrc.concat([0])).map( (x,i) => x.monto ).reduce( (acumulador, valor_actual) => acumulador + valor_actual )*0.001).toFixed(3)) " >
+              <p [text]="Valor Mínimo '$'.concat( (values( itemsSrc.concat([0])).map( (x,i) => x.monto ).reduce( (acumulador, valor_actual) => acumulador + valor_actual )*0.001).toFixed(3)) " >
                  $ 0
+              </p>
+
+              <p ="Al pagar el valor mínimo los Electricistas estarán más intereados en ayudarle.">
               </p>
 
             </div>
