@@ -944,7 +944,7 @@
 
 
         <p class="price-description"> Importante:
-          <span > Los electricistas prefieren a los clientes que pagan de forma anticipada.</span>
+          <span >Los electricistas prefieren clientes solventes.</span>
         </p>
 
 
@@ -957,12 +957,17 @@
             </button>
           </div>
          
+          <p [text]="'Valor Mínimo $'.concat( (values( itemsSrc.concat([0])).map( (x,i) => x.monto ).reduce( (acumulador, valor_actual) => acumulador + valor_actual )*0.001).toFixed(3)) " >
+             $ 0
+          </p>
         </div>
 
 
 
 
         <div class="product-gallery">
+
+
 
           <amp-list
             class="mt3"
