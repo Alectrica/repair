@@ -943,32 +943,26 @@
 	</p>
 
 
+        <p class="price-description"> Importante:
+          <span > Los electricistas prefieren los clientes que pagan antes.</span>
+        </p>
+
+
+        <div >
+          <div class = "content">
+            <button 
+              class="ampstart-btn ml1 caps"
+              on="tap:item-list.refresh"
+              type='submit'>Pagar El Mínimo
+            </button>
+          </div>
+         
+        </div>
+
 
 
 
         <div class="product-gallery">
-
-
-            <div >
-              <div class = "content">
-                <button 
-                  class="ampstart-btn ml1 caps"
-                  on="tap:item-list.refresh"
-                  type='submit'>Pagar El Mínimo
-                </button>
-              </div>
-             
-              <p [text]="'Valor Mínimo $'.concat( (values( itemsSrc.concat([0])).map( (x,i) => x.monto ).reduce( (acumulador, valor_actual) => acumulador + valor_actual )*0.001).toFixed(3)) " >
-                 $ 0
-              </p>
-
-              <p> "Importante: Al pagar el valor mínimo los Electricistas estarán más intereados en ayudarle."
-              </p>
-
-            </div>
-
-
-
 
           <amp-list
             class="mt3"
