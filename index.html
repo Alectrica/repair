@@ -958,7 +958,7 @@
                 </button>
               </div>
              
-              <p [text]="'$'.concat( (values([0] || itemsSrc).map( (x,i) => x.monto ).reduce( (acumulador, valor_actual) => acumulador + valor_actual )*0.001).toFixed(3)) " >
+              <p [text]="'$'.concat( (values( itemsSrc.concat([0])).map( (x,i) => x.monto ).reduce( (acumulador, valor_actual) => acumulador + valor_actual )*0.001).toFixed(3)) " >
                  $ 0
               </p>
 
