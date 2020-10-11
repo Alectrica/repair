@@ -941,11 +941,14 @@
 	<p class="price-description"> Agregar:
 	  <span [text]="product[product.selectedColor].nombres[product.selectedSlide]">Visitar</span>
 	</p>
-        <span>PAGAR CON
-          <a href="https://khipu.alectrica.cl">
-            <amp-img class="ampstart-btn ml10" src="img/pagar.svg" width="106" height="56"></amp-img>
-          </span>
-        </a>
+
+        <div>
+          <span>PAGAR LA VISITA CON
+            <a href="https://khipu.alectrica.cl">
+              <amp-img class="ampstart-btn ml10" src="img/pagar.svg" width="106" height="56"></amp-img>
+            </span>
+          </a>
+        </div>
 
         <p class="price-description"> Costo Mínimo:
           <span [text]="'$'.concat( (values( itemsSrc.concat([0])).map( (x,i) => x.monto ).reduce( (acumulador, valor_actual) => acumulador + valor_actual )*0.001).toFixed(3)) " >
