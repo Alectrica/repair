@@ -943,10 +943,23 @@
 	</p>
 
         <div >
+
+          <form method   = "POST"
+            class = "close-gallery-button"
+            action-xhr = "https://khipu.alectrica.cl.json"
+            target    = "_top"
+            on = "submit-success:item-list.refresh">
+               <input name = "clientId" 
+                 type = "hidden" 
+                 value = "CLIENT_ID(uid)" 
+                 data-amp-replace = "CLIENT_ID">
+            < button  type = "submit" >Pagar Visita</button>
+          </form>
+
           <div class = "content">
             <button 
               class="ampstart-btn ml1 caps"
-              on="tap:item-list.refresh"
+              on="tap:item-list.refresh" 
               type='submit'>Pagar
             </button>
           </div>
