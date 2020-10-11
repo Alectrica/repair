@@ -944,10 +944,13 @@
 
         <div >
 
-
-        <a href="https://khipu.alectrica.cl">
-          <amp-img src="img/pagar.svg" width="36" height="36"></amp-img>
-        </a>
+        <p class="price-description"> Pagar Visita
+          <span>
+            <a href="https://khipu.alectrica.cl">
+              <amp-img src="img/pagar.svg" width="136" height="136"></amp-img>
+           </a>
+         </span>
+        </p>
 
         <p class="price-description"> Costo Mínimo:
           <span [text]="'$'.concat( (values( itemsSrc.concat([0])).map( (x,i) => x.monto ).reduce( (acumulador, valor_actual) => acumulador + valor_actual )*0.001).toFixed(3)) " >
