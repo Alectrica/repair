@@ -48,28 +48,6 @@
   }
   </script>
 
-    <script id="amp-access" type="application/json">
-    {
-    "authorization": "https://backend.alectrica.cl/authenticate.json?rid=READER_ID&url=CANONICAL_URL&ref=DOCUMENT_REFERRER&_=RANDOM&clientId=CLIENT_ID(uid)",
-    "noPingback": true,
-    "login": {
-    "create-token":"https://backend.alectrica.cl/create_token.json/?rid=READER_ID&return=RETURN_URL&amp=true&clientId=CLIENT_ID(uid)",
-    "sign-in": "https://khipu.alectrica.cl/?rid=READER_ID&return=RETURN_URL&amp=true&clientId=CLIENT_ID(uid)",
-    "sign-out": "https://backend.alectrica.cl/logout.json/?rid=READER_ID&return=RETURN_URL&amp=true&clientId=CLIENT_ID(uid)",
-     "destroy-reader": "https://backend.alectrica.cl/destroy_reader.json/?rid=READER_ID&return=RETURN_URL&amp=true&clientId=CLIENT_ID(uid)",
-     "destroy-user": "https://backend.alectrica.cl/destroy_user.json/?rid=READER_ID&return=RETURN_URL&amp=true&clientId=CLIENT_ID(uid)",
-     "sign-up":  "https://backend.alectrica.cl/sign_up.json/?rid=READER_ID&return=RETURN_URL&amp=true&clientId=CLIENT_ID(uid)"
-    },
-    "authorizationFallbackResponse": {
-      "error": true,
-      "access": false,
-      "subscriber": false
-    }
-    }
-    </script>
-
-
-
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
     <meta charset='utf-8'>
     
@@ -966,16 +944,10 @@
 
         <div >
 
-      <div class="my2">
-        <button 
-          hidden
-          [hidden] = "presupuesto.Iniciado == 1 ? false : true",
-          on="tap:amp-access.login-sign-in,AMP.setState({presupuesto: {Iniciado: 2}})"
-          id="boton-login"
-          class="ampstart-btn ampstart-btn-secondary ml1 caps">Pagar
-        </button>
-      </div>
-        
+
+        <a href="https://khipu.alectrica.cl">
+          <amp-img src="icons/home.png" width="36" height="36"></amp-img>
+        </a>
 
         <p class="price-description"> Costo Mínimo:
           <span [text]="'$'.concat( (values( itemsSrc.concat([0])).map( (x,i) => x.monto ).reduce( (acumulador, valor_actual) => acumulador + valor_actual )*0.001).toFixed(3)) " >
