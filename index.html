@@ -768,7 +768,7 @@
 		Llamar
 	      </a>
               <button 
-                on="tap:AMP.setState( { product: { selectedServicio: product.selectedServicio + 1}, itemsSrc: itemsSrc.concat([ { id: 0,  monto: product[product.selectedColor].montos[0], precio: product[product.selectedColor].precios[0], img: product[product.selectedColor].imagenes[0]}]) } ),item-list.refresh "
+                on="tap:AMP.setState( { product: { selectedServicio: product.selectedServicio + 1}, itemsSrc: itemsSrc.concat([ { id: product[product.selectedColor].ids[1],  monto: product[product.selectedColor].montos[0], precio: product[product.selectedColor].precios[0], img: product[product.selectedColor].imagenes[0]}]) } ),item-list.refresh "
                 class="ampstart-btn caps m2 agregar-gallery-button">Agregar
               </button>
 
@@ -788,7 +788,7 @@
 	      role="button"
 	      tabindex="0">
               <button 
-                on="tap:AMP.setState( { product: { selectedServicio: product.selectedServicio + 1}, itemsSrc: itemsSrc.concat([ { id: 1,  monto: product[product.selectedColor].montos[1], precio: product[product.selectedColor].precios[1], img: product[product.selectedColor].imagenes[1]}]) } ),item-list.refresh "
+                on="tap:AMP.setState( { product: { selectedServicio: product.selectedServicio + 1}, itemsSrc: itemsSrc.concat([ { id: product[product.selectedColor].ids[2],  monto: product[product.selectedColor].montos[1], precio: product[product.selectedColor].precios[1], img: product[product.selectedColor].imagenes[1]}]) } ),item-list.refresh "
                 class="ampstart-btn caps m2 agregar-gallery-button">Agregar
               </button>
 	      <amp-img src="/img/atencion_corte_de_luz.png"
@@ -806,7 +806,7 @@
 	      role="button"
 	      tabindex="0">
               <button 
-                on="tap:AMP.setState( { product: { selectedServicio: product.selectedServicio + 1}, itemsSrc: itemsSrc.concat([ { id: 2,  monto: product[product.selectedColor].montos[2], precio: product[product.selectedColor].precios[2], img: product[product.selectedColor].imagenes[2]}]) } ),item-list.refresh "
+                on="tap:AMP.setState( { product: { selectedServicio: product.selectedServicio + 1}, itemsSrc: itemsSrc.concat([ { id: product[product.selectedColor].ids[3],  monto: product[product.selectedColor].montos[2], precio: product[product.selectedColor].precios[2], img: product[product.selectedColor].imagenes[2]}]) } ),item-list.refresh "
                 class="ampstart-btn caps m2 agregar-gallery-button">Agregar
               </button>
 	      <amp-img src="/img/instalacion_luminaria.png"
@@ -825,7 +825,7 @@
 	      role="button"
 	      tabindex="0">
               <button 
-                on="tap:AMP.setState( { product: { selectedServicio: product.selectedServicio + 1}, itemsSrc: itemsSrc.concat([ { id: 3,  monto: product[product.selectedColor].montos[3], precio: product[product.selectedColor].precios[3], img: product[product.selectedColor].imagenes[3]}]) } ),item-list.refresh "
+                on="tap:AMP.setState( { product: { selectedServicio: product.selectedServicio + 1}, itemsSrc: itemsSrc.concat([ { id: product[product.selectedColor].ids[3],  monto: product[product.selectedColor].montos[3], precio: product[product.selectedColor].precios[3], img: product[product.selectedColor].imagenes[3]}]) } ),item-list.refresh "
                 class="ampstart-btn caps m2 agregar-gallery-button">Agregar
               </button>
 	      <amp-img src="/img/instalacion_enchufe.png"
@@ -894,10 +894,10 @@
                   "3": "$15.000"
                   },
 		"ids" : {
-		  "0": "",
-		  "1": "",
-		  "2": "",
-		  "3": ""
+		  "0": "1",
+		  "1": "2",
+		  "2": "3",
+		  "3": "4"
 		  },
 		"nombres": {
 		  "0": "Visita Domicilio",
@@ -931,13 +931,33 @@
 	</p>
 
         <div>
+          <form method="GET" action="https://pago.prodemar.cl/pagar"  
+            target="_top">
+
+            <input readonly name="amount" type="text" placeholder="Monto Bruto" [value] = "''.concat( (values( itemsSrc.concat([0])).map( (x,i) => x.monto ).reduce( (acumulador, valor_actual) => acumulador + valor_actual )*1).toFixed(0)) " >
+
+            <input readonly name="product_id" type="text" placeholder="Productos" [value] = "''.concat( (values( itemsSrc.concat([0])).map( (x,i) => x.id )  )) " >
+
+
+            <a id="sample-logo" href="/"></a>
+            <input type="submit" value="Ir a Pagar">
+          </form>
+
+        </div>
+
+
+
+
+
+<!--
+        <div>
           <span>PAGAR LA VISITA CON
             <a href="https://khipu.alectrica.cl">
               <amp-img class="ampstart-btn ml10" src="img/khipu-webpay.jpg" width="106" height="56"></amp-img>
             </span>
           </a>
         </div>
-
+-->
         <p class="price-description"> Costo Mínimo:
           <span [text]="'$'.concat( (values( itemsSrc.concat([0])).map( (x,i) => x.monto ).reduce( (acumulador, valor_actual) => acumulador + valor_actual )*0.001).toFixed(3)) " >
              $ 0
